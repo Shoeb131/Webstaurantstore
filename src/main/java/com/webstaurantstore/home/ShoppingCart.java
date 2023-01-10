@@ -7,10 +7,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.webstaurantstore.utilities.GenericUtil;
 
-
 public class ShoppingCart {
-	@FindBy(xpath = "//*[text()='Empty Cart']") WebElement emptyCartButton;
-	@FindBy(xpath = "//footer[contains(@class,'bg-gray-100 border-gray-300 border-solid border-0')]/button[1]") WebElement confirmingEmptyCartButton;
+	@FindBy(xpath = "//*[text()='Empty Cart']")
+	WebElement emptyCartButton;
+	@FindBy(xpath = "//footer[contains(@class,'bg-gray-100 border-gray-300 border-solid border-0')]/button[1]")
+	WebElement confirmingEmptyCartButton;
 	private Logger log = LogManager.getLogger(this.getClass().getName());
 	private WebDriver driver;
 

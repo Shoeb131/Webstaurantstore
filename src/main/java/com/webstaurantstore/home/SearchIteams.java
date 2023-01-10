@@ -12,12 +12,20 @@ import com.webstaurantstore.utilities.GenericUtil;
 
 
 public class SearchIteams {
-	@FindBy(id = "searchval") WebElement searchBox;
-	@FindBy(xpath = "//button[@value='Search']") WebElement searchButton;
-	@FindBy(xpath = "//a[contains(@aria-label,'last page, page')]") WebElement lastPage;
-	@FindBy(xpath = "//a[@href='/viewcart.cfm']") WebElement viewCartButton;
-	@FindBy(name ="addToCartButton" ) List<WebElement> totalAddToCartCount;
-	@FindBy(xpath = "//*[@id='details']") List<WebElement> allProducts;
+	@FindBy(id = "searchval")
+	WebElement searchBox;
+	@FindBy(xpath = "//button[@value='Search']")
+	WebElement searchButton;
+	@FindBy(xpath = "//a[contains(@aria-label,'last page, page')]")
+	WebElement lastPage;
+	@FindBy(xpath = "//a[@href='/viewcart.cfm']")
+	WebElement viewCartButton;
+	@FindBy(name = "addToCartButton")
+	List<WebElement> totalAddToCartCount;
+	@FindBy(xpath = "//*[@id='details']")
+	List<WebElement> allProducts;
+	@FindBy(xpath = "//*[contains(@class,'inline-block leading-4 align-top')]")
+	List<WebElement> pageCount;
 	
 	private Logger log = LogManager.getLogger(this.getClass().getName());
 	private WebDriver driver;
@@ -55,9 +63,6 @@ public class SearchIteams {
 
 	public ShoppingCart addLastSearchIteamOnTheCart() {
 		log.info("Adding the last search iteam on the Shopping Cart");
-
-		List<WebElement> pageCount = driver
-				.findElements(By.xpath("//*[contains(@class,'inline-block leading-4 align-top')]"));
 
 		int pcount = pageCount.size();
 

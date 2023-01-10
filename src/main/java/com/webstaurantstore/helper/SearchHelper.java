@@ -28,7 +28,6 @@ public class SearchHelper {
 	}
 
 	public List<String> verifySearchResults(String titleText) {
-		log.info("Verifying the following titleText " + titleText);
 		return searchIteam.openAllPagesAndVerifyProductTitle(titleText);
 	}
 
