@@ -1,6 +1,4 @@
-
 Feature: Searching item in the webstaurantstore.com site
- 
 
   Scenario: Searching stainless work table
     Given I navigate to the webstaurantstore site

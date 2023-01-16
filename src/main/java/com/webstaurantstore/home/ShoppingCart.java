@@ -1,4 +1,5 @@
 package com.webstaurantstore.home;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -9,9 +10,9 @@ import com.webstaurantstore.utilities.GenericUtil;
 
 public class ShoppingCart {
 	@FindBy(xpath = "//*[text()='Empty Cart']")
-	WebElement emptyCartButton;
+	private WebElement emptyCartButton;
 	@FindBy(xpath = "//footer[contains(@class,'bg-gray-100 border-gray-300 border-solid border-0')]/button[1]")
-	WebElement confirmingEmptyCartButton;
+	private WebElement confirmingEmptyCartButton;
 	private Logger log = LogManager.getLogger(this.getClass().getName());
 	private WebDriver driver;
 

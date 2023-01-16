@@ -2,7 +2,6 @@ package com.webstaurantstore.stepdefinations;
 
 import static org.testng.Assert.assertTrue;
 
-
 import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,7 +9,6 @@ import com.webstaurantstore.helper.SearchHelper;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
 
 public class StepDefinationSearchIteams {
 	private Logger log = LogManager.getLogger(this.getClass().getName());
@@ -29,8 +27,9 @@ public class StepDefinationSearchIteams {
 	@When("Verify search result has the word {string} in its title")
 	public void verify_search_result_has_the_word_table_in_its_title(String titleText) {
 		List<String> theFinalMissingTextTitleList = searchHelper.verifySearchResults(titleText);
-		log.warn("The following titles (if the list is not empty) are missing expected text "+ theFinalMissingTextTitleList);
-		
+		log.warn("The following titles (if the list is not empty) are missing expected text "
+				+ theFinalMissingTextTitleList);
+
 		assertTrue(theFinalMissingTextTitleList.isEmpty(),
 				"Verify the given title exists on the search iteams " + theFinalMissingTextTitleList);
 
